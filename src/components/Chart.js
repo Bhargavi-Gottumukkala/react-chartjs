@@ -3,7 +3,7 @@ import { Bar } from 'react-chartjs-2';
 
 function CustomChart(props) {
     const barData = [95, 110, 130, 150, 158, 169];
-    const colors = barData.map(value => (value <= 95) ? props.normal : (((value > 90) && (value < 140)) ? props.warning : props.critical));
+    const colors = barData.map(value => (value <= 95) ? props.normal : (((value > 95) && (value < 140)) ? props.warning : props.critical));
     const chartData = {
         labels: ['data1', 'data2', 'data3', 'data4', 'data5', 'data6'],
         datasets: [{
